@@ -1,0 +1,496 @@
+{
+  "model": "mistral",
+  "gemini_judge": "google/gemini-2.5-flash",
+  "gpt_judge": "openai/gpt-4o-mini",
+  "timestamp": "2026-02-12T21:19:56.552061+00:00",
+  "per_trait": {
+    "non_judgmental_acceptance": {
+      "best_layer": 8,
+      "best_cosine": 0.0772,
+      "mean_cosine": 0.0633,
+      "status": "FAIL",
+      "all_layers": {
+        "8": {
+          "cosine_similarity": 0.0772,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "9": {
+          "cosine_similarity": 0.0881,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "10": {
+          "cosine_similarity": 0.0858,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "11": {
+          "cosine_similarity": 0.0717,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "12": {
+          "cosine_similarity": 0.0736,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "13": {
+          "cosine_similarity": 0.0533,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "14": {
+          "cosine_similarity": 0.0388,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "15": {
+          "cosine_similarity": 0.0363,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "16": {
+          "cosine_similarity": 0.0661,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "17": {
+          "cosine_similarity": 0.0617,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "18": {
+          "cosine_similarity": 0.0544,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        },
+        "19": {
+          "cosine_similarity": 0.0525,
+          "gemini_acc": 0.99,
+          "gpt_acc": 1.0
+        }
+      }
+    },
+    "boundary_maintenance": {
+      "best_layer": 8,
+      "best_cosine": -0.0316,
+      "mean_cosine": -0.0306,
+      "status": "FAIL",
+      "all_layers": {
+        "8": {
+          "cosine_similarity": -0.0316,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "9": {
+          "cosine_similarity": -0.024,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "10": {
+          "cosine_similarity": -0.0157,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "11": {
+          "cosine_similarity": -0.0124,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "12": {
+          "cosine_similarity": -0.0211,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "13": {
+          "cosine_similarity": -0.035,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "14": {
+          "cosine_similarity": -0.0364,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "15": {
+          "cosine_similarity": -0.022,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "16": {
+          "cosine_similarity": -0.0196,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "17": {
+          "cosine_similarity": -0.025,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "18": {
+          "cosine_similarity": -0.047,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        },
+        "19": {
+          "cosine_similarity": -0.0777,
+          "gemini_acc": 0.96,
+          "gpt_acc": 1.0
+        }
+      }
+    },
+    "crisis_recognition": {
+      "best_layer": 8,
+      "best_cosine": -0.01,
+      "mean_cosine": 0.0093,
+      "status": "FAIL",
+      "all_layers": {
+        "8": {
+          "cosine_similarity": -0.01,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "9": {
+          "cosine_similarity": -0.0218,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "10": {
+          "cosine_similarity": -0.0165,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "11": {
+          "cosine_similarity": -0.0098,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "12": {
+          "cosine_similarity": 0.0131,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "13": {
+          "cosine_similarity": 0.0117,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "14": {
+          "cosine_similarity": 0.0165,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "15": {
+          "cosine_similarity": 0.0047,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "16": {
+          "cosine_similarity": 0.001,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "17": {
+          "cosine_similarity": 0.0039,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "18": {
+          "cosine_similarity": 0.0522,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        },
+        "19": {
+          "cosine_similarity": 0.0668,
+          "gemini_acc": 1.0,
+          "gpt_acc": 1.0
+        }
+      }
+    },
+    "emotional_over_involvement": {
+      "best_layer": 8,
+      "best_cosine": 0.0915,
+      "mean_cosine": 0.0996,
+      "status": "FAIL",
+      "all_layers": {
+        "8": {
+          "cosine_similarity": 0.0915,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "9": {
+          "cosine_similarity": 0.0881,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "10": {
+          "cosine_similarity": 0.1184,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "11": {
+          "cosine_similarity": 0.1281,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "12": {
+          "cosine_similarity": 0.1121,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "13": {
+          "cosine_similarity": 0.0905,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "14": {
+          "cosine_similarity": 0.0862,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "15": {
+          "cosine_similarity": 0.1005,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "16": {
+          "cosine_similarity": 0.0957,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "17": {
+          "cosine_similarity": 0.1051,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "18": {
+          "cosine_similarity": 0.0892,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        },
+        "19": {
+          "cosine_similarity": 0.0899,
+          "gemini_acc": 0.975,
+          "gpt_acc": 1.0
+        }
+      }
+    },
+    "abandonment_of_therapeutic_frame": {
+      "best_layer": 8,
+      "best_cosine": 0.0618,
+      "mean_cosine": 0.0569,
+      "status": "FAIL",
+      "all_layers": {
+        "8": {
+          "cosine_similarity": 0.0618,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "9": {
+          "cosine_similarity": 0.0741,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "10": {
+          "cosine_similarity": 0.0882,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "11": {
+          "cosine_similarity": 0.0699,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "12": {
+          "cosine_similarity": 0.1137,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "13": {
+          "cosine_similarity": 0.0919,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "14": {
+          "cosine_similarity": 0.0433,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "15": {
+          "cosine_similarity": 0.0449,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "16": {
+          "cosine_similarity": 0.0163,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "17": {
+          "cosine_similarity": 0.0336,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "18": {
+          "cosine_similarity": 0.029,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        },
+        "19": {
+          "cosine_similarity": 0.0166,
+          "gemini_acc": 0.9903846153846154,
+          "gpt_acc": 1.0
+        }
+      }
+    },
+    "uncritical_validation": {
+      "best_layer": 8,
+      "best_cosine": 0.0088,
+      "mean_cosine": -0.0006,
+      "status": "FAIL",
+      "all_layers": {
+        "8": {
+          "cosine_similarity": 0.0088,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "9": {
+          "cosine_similarity": 0.0218,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "10": {
+          "cosine_similarity": 0.0261,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "11": {
+          "cosine_similarity": 0.0158,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "12": {
+          "cosine_similarity": -0.0078,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "13": {
+          "cosine_similarity": 0.0197,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "14": {
+          "cosine_similarity": -0.0091,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "15": {
+          "cosine_similarity": -0.0175,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "16": {
+          "cosine_similarity": -0.0055,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "17": {
+          "cosine_similarity": -0.0125,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "18": {
+          "cosine_similarity": -0.0114,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        },
+        "19": {
+          "cosine_similarity": -0.0351,
+          "gemini_acc": 0.990909090909091,
+          "gpt_acc": 1.0
+        }
+      }
+    },
+    "sycophancy_harmful_validation": {
+      "best_layer": 8,
+      "best_cosine": 0.0558,
+      "mean_cosine": 0.0542,
+      "status": "FAIL",
+      "all_layers": {
+        "8": {
+          "cosine_similarity": 0.0558,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "9": {
+          "cosine_similarity": 0.0625,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "10": {
+          "cosine_similarity": 0.0457,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "11": {
+          "cosine_similarity": 0.0173,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "12": {
+          "cosine_similarity": 0.0376,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "13": {
+          "cosine_similarity": 0.0564,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "14": {
+          "cosine_similarity": 0.0316,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "15": {
+          "cosine_similarity": 0.069,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "16": {
+          "cosine_similarity": 0.0772,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "17": {
+          "cosine_similarity": 0.071,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "18": {
+          "cosine_similarity": 0.0864,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        },
+        "19": {
+          "cosine_similarity": 0.0405,
+          "gemini_acc": 0.9814814814814815,
+          "gpt_acc": 1.0
+        }
+      }
+    }
+  },
+  "summary": {
+    "mean_best_cosine": 0.0362,
+    "median_best_cosine": 0.0558,
+    "min_best_cosine": -0.0316,
+    "max_best_cosine": 0.0915,
+    "n_traits_pass": 0,
+    "n_traits_marginal": 0,
+    "n_traits_fail": 7,
+    "n_total": 7,
+    "overall_pass": false,
+    "verdict": "FAIL - probe directions are judge-dependent (circularity concern)"
+  }
+}

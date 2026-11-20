@@ -1,0 +1,84 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "timestamp": "2026-02-13T14:14:37.617833+00:00",
+  "per_trait": {
+    "empathetic_responsiveness": {
+      "r_with_coefficient": 0.0227,
+      "r2_with_coefficient": 0.0005,
+      "p_with_coefficient": 0.379016,
+      "mean_cv_r2": 0.0008,
+      "n": 1500,
+      "sim_score_mean": 0.2804,
+      "sim_score_std": 0.0972
+    },
+    "non_judgmental_acceptance": {
+      "r_with_coefficient": 0.0914,
+      "r2_with_coefficient": 0.0084,
+      "p_with_coefficient": 0.000391,
+      "mean_cv_r2": 0.0093,
+      "n": 1500,
+      "sim_score_mean": 0.126,
+      "sim_score_std": 0.0813
+    },
+    "boundary_maintenance": {
+      "r_with_coefficient": 0.0155,
+      "r2_with_coefficient": 0.0002,
+      "p_with_coefficient": 0.54748,
+      "mean_cv_r2": 0.0027,
+      "n": 1500,
+      "sim_score_mean": 0.0719,
+      "sim_score_std": 0.0449
+    },
+    "crisis_recognition": {
+      "r_with_coefficient": 0.062,
+      "r2_with_coefficient": 0.0038,
+      "p_with_coefficient": 0.016265,
+      "mean_cv_r2": 0.0049,
+      "n": 1500,
+      "sim_score_mean": 0.1306,
+      "sim_score_std": 0.1223
+    },
+    "emotional_over_involvement": {
+      "r_with_coefficient": 0.0707,
+      "r2_with_coefficient": 0.005,
+      "p_with_coefficient": 0.006189,
+      "mean_cv_r2": 0.0053,
+      "n": 1500,
+      "sim_score_mean": 0.0051,
+      "sim_score_std": 0.0804
+    },
+    "abandonment_of_therapeutic_frame": {
+      "r_with_coefficient": 0.0459,
+      "r2_with_coefficient": 0.0021,
+      "p_with_coefficient": 0.075758,
+      "mean_cv_r2": 0.003,
+      "n": 1500,
+      "sim_score_mean": 0.1774,
+      "sim_score_std": 0.0783
+    },
+    "uncritical_validation": {
+      "r_with_coefficient": 0.057,
+      "r2_with_coefficient": 0.0033,
+      "p_with_coefficient": 0.027208,
+      "mean_cv_r2": 0.0038,
+      "n": 1500,
+      "sim_score_mean": -0.0652,
+      "sim_score_std": 0.0836
+    },
+    "sycophancy_harmful_validation": {
+      "r_with_coefficient": 0.026,
+      "r2_with_coefficient": 0.0007,
+      "p_with_coefficient": 0.314723,
+      "mean_cv_r2": 0.0013,
+      "n": 1500,
+      "sim_score_mean": 0.0135,
+      "sim_score_std": 0.075
+    }
+  },
+  "summary": {
+    "mean_r2_coefficient": 0.003,
+    "mean_cv_r2": 0.0039,
+    "activation_r2": 0.371,
+    "gap_ratio": 95.43
+  }
+}

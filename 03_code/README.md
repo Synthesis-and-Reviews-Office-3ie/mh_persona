@@ -1,66 +1,120 @@
-# 03_code - Scripts
+# 03_code — Scripts & Data
 
-> **Last updated:** February 5, 2026
-
----
-
-## Active Scripts
-
-| Script | Purpose |
-|--------|---------|
-| `step0a_generate_scenarios.py` | Generate synthetic test scenarios |
-| `step0b_process_esconv.py` | Process ESConv real conversations |
-| `step1_validate_traits.py` | **MAIN:** Validate activation→behavior link |
+> **Last updated:** February 13, 2026
 
 ---
 
-## Commands
-
-```bash
-# Step 1: Validate traits (CURRENT)
-modal run step1_validate_traits.py --model llama3
-
-# Step 0: Data prep (already done)
-modal run step0a_generate_scenarios.py
-modal run step0b_process_esconv.py
-```
-
----
-
-## Key Reference (archive/)
-
-| Script | What It Proved |
-|--------|----------------|
-| `archive/steering_iterations/modal_steering_v29_improved_traits.py` | 9/9 traits steerable (r=0.68-0.91) |
-
----
-
-## Folder Structure
+## Directory Structure
 
 ```
 03_code/
-├── step0a_generate_scenarios.py  ← Data: synthetic
-├── step0b_process_esconv.py      ← Data: ESConv
-├── step1_validate_traits.py      ← MAIN
-├── README.md                     ← This file
-├── STEERING_LESSONS_LEARNED.md   ← Technical lessons
-├── archive/                      ← Old scripts
-│   └── steering_iterations/      ← V5-V29
-├── notebooks/                    ← Jupyter
-└── persona_vectors/              ← Vector storage
+├── pipeline/           # Core reproducibility steps (run in order)
+├── experiments/        # Modal GPU experiments (Phase 4 additions)
+├── analysis/           # Statistics, visualisation, post-processing
+├── data/               # Intermediate data (aggregated JSONs, diagnostics)
+├── results/            # Experiment outputs (JSONs + figures)
+├── persona_vectors/    # Steering vector extraction module
+├── notebooks/          # Jupyter notebooks
+├── archive/            # Old script versions (v5–v29 iterations)
+├── challenge_scenarios.json  # 100 clinical test scenarios
+└── README.md           # This file
 ```
+
+---
+
+## Pipeline Scripts (`pipeline/`)
+
+Run in order to reproduce the core results.
+
+| Script | Purpose | Command |
+|--------|---------|---------|
+| `step0a_generate_scenarios.py` | Generate synthetic test scenarios | `modal run pipeline/step0a_generate_scenarios.py` |
+| `step0b_process_esconv.py` | Process ESConv real conversations | `modal run pipeline/step0b_process_esconv.py` |
+| `step1_validate_traits.py` | **Phase 1/2a:** Template-based steering validation | `modal run pipeline/step1_validate_traits.py --model llama3` |
+| `step1b_contrastive_probing.py` | **Phase 2c:** Contrastive probe validation | `modal run pipeline/step1b_contrastive_probing.py --model qwen2` |
+| `step2_monitor_drift.py` | **Phase 3:** EWMA+CUSUM monitoring | `modal run pipeline/step2_monitor_drift.py --model llama3` |
+| `step3_safety_stress_test.py` | Safety stress test at extreme coefficients | `modal run pipeline/step3_safety_stress_test.py` |
+| `step4_select_review_sessions.py` | Select sessions for human review | `python pipeline/step4_select_review_sessions.py` |
+| `generate_steered_corpus_v2.py` | Generate expanded steered corpus (12K responses) | `modal run pipeline/generate_steered_corpus_v2.py` |
+| `build_human_validation_set.py` | Build rating set for clinician validation | `python pipeline/build_human_validation_set.py` |
+
+---
+
+## Experiment Scripts (`experiments/`)
+
+Phase 4 experiments, each run independently on Modal.
+
+| Script | Purpose | Paper Section |
+|--------|---------|---------------|
+| `modal_adversarial_redteam.py` | Adversarial prompting detection | §6.3 |
+| `modal_context_erosion_v2.py` | 100-turn conversation drift | §6.1 |
+| `modal_cross_prediction_test.py` | Cross-model vector transfer test | §3.2 |
+| `modal_deberta_classifier.py` | Fine-tuned text classifier baseline | §4.2 |
+| `modal_embedding_similarity.py` | Embedding similarity baseline | §4.1 |
+| `modal_esconv_naturalistic.py` | ESConv naturalistic evaluation | §3.6 |
+| `modal_finetuning_regression.py` | LoRA fine-tuning drift test | §6.2 |
+| `modal_gemini_probe_retraining.py` | Gemini-based probe retraining (circularity test) | Limitation |
+| `modal_judge_claude.py` | Claude Sonnet cross-judge validation | §7 |
+| `modal_judge_gemini.py` | Gemini 2.5 Flash cross-judge validation | §7 |
+| `modal_judge_gpt4o_mini.py` | GPT-4o-mini judge scoring | §3.1 |
+| `modal_quantisation_comparison.py` | NF4/FP16/8-bit precision comparison | Limitation |
+| `modal_random_direction_control.py` | Random direction control experiment | §3.6 |
+
+---
+
+## Analysis Scripts (`analysis/`)
+
+Post-processing, statistics, and figure generation. Run locally (no GPU needed).
+
+| Script | Purpose |
+|--------|---------|
+| `analyze_human_llm_icc.py` | Human–LLM ICC and per-trait agreement |
+| `analyze_human_validation.py` | Clinician validation analysis |
+| `analyze_judge_agreement.py` | Inter-judge reliability (GPT vs Gemini vs Claude) |
+| `analyze_steered_corpus.py` | Text feature analysis of steered responses |
+| `analyze_corpus_deep.py` | Deep corpus analysis (12K expanded) |
+| `m4a_multivariate_text_classifier.py` | Random forest text classifier |
+| `m5b_cross_trait_discriminant.py` | Cross-trait correlation matrices |
+| `phase_a_analyses.py` | Factor analysis + post-hoc power |
+| `power_analysis.py` | Power curves and MDE analysis |
+| `generate_diagrams.py` | Publication figures (SVG/PDF) |
+| `judge_rubrics.py` | LLM judge rubric definitions |
+| `revision_analyses.py` | Quick-win analyses for revision |
+
+---
+
+## Data (`data/`)
+
+Intermediate data files generated by pipeline and experiments.
+
+| File pattern | Contents |
+|-------------|----------|
+| `aggregated_*.json` | Aggregated steering/probing results per model |
+| `raw_scenario_data_*.json` | Raw per-scenario judge scores |
+| `trait_layer_matrix_*.json` | Layer × trait validation matrices |
+| `vector_diagnostics_*.json` | Steering vector quality metrics |
+| `probe_diagnostics_*.json` | Contrastive probe quality metrics |
+| `safety_stress_test_results.json` | Safety test outputs |
+
+---
+
+## Results (`results/`)
+
+Experiment output JSONs and generated figures. Key files:
+- `phase_a_analyses.json` — Factor analysis + post-hoc power
+- `m5b_cross_trait_discriminant.json` — Cross-trait correlation matrices
+- `human_llm_icc_results.json` — Human validation results
+- `deberta_text_classifier.json` — DeBERTa comparison results
 
 ---
 
 ## Models
 
-| Model | Status |
-|-------|--------|
-| Llama3-8B (NousResearch) | 🔄 Testing |
-| Qwen2-7B | ⏳ Pending |
-| Mistral-7B | ⏳ Pending |
-
-**Platform:** Modal.com with A10G GPU, 4-bit quantization
+| Model | Quantisation | Platform |
+|-------|-------------|----------|
+| Llama-3-8B-Instruct | 4-bit NF4 | Modal A10G |
+| Qwen2-7B-Instruct | 4-bit NF4 | Modal A10G |
+| Mistral-7B-Instruct-v0.2 | 4-bit NF4 | Modal A10G |
 
 ---
 
@@ -71,4 +125,4 @@ modal run step0b_process_esconv.py
 3. **Extraction:** Last-token, not mean pooling
 4. **Coefficients:** Moderate range [-3, +3]
 
-See `STEERING_LESSONS_LEARNED.md` for details.
+See `.github/copilot-instructions.md` for full details.

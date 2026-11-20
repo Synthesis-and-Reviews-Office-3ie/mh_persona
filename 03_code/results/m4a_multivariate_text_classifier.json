@@ -1,0 +1,452 @@
+{
+  "primary_1200": {
+    "corpus": "primary_1200",
+    "n_responses": 1200,
+    "n_features": 19,
+    "feature_names": [
+      "amplifiers",
+      "avg_word_length",
+      "char_length",
+      "client_focus",
+      "directives",
+      "has_list",
+      "hedges",
+      "opens_with_validation",
+      "paragraphs",
+      "question_ratio",
+      "questions",
+      "safety_referrals",
+      "self_reference",
+      "sentence_count",
+      "vader_compound",
+      "vader_neg",
+      "vader_neu",
+      "vader_pos",
+      "word_count"
+    ],
+    "per_trait": {
+      "abandonment_of_therapeutic_frame": {
+        "lr_r2": 0,
+        "lr_r2_std": 0.3192,
+        "ridge_r2": 0,
+        "ridge_r2_std": 0.1257,
+        "rf_r2": 0,
+        "rf_r2_std": 0.0572,
+        "gb_r2": 0,
+        "gb_r2_std": 0.1466,
+        "best_single_text_r2": 0.0086,
+        "activation_r2": 0.4638,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      },
+      "boundary_maintenance": {
+        "lr_r2": 0,
+        "lr_r2_std": 1.0554,
+        "ridge_r2": 0,
+        "ridge_r2_std": 1.1337,
+        "rf_r2": 0.1521,
+        "rf_r2_std": 0.1268,
+        "gb_r2": 0.118,
+        "gb_r2_std": 0.1918,
+        "best_single_text_r2": 0.0392,
+        "activation_r2": 0.2256,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      },
+      "crisis_recognition": {
+        "lr_r2": 0,
+        "lr_r2_std": 0.6006,
+        "ridge_r2": 0,
+        "ridge_r2_std": 0.1319,
+        "rf_r2": 0,
+        "rf_r2_std": 0.0724,
+        "gb_r2": 0,
+        "gb_r2_std": 0.182,
+        "best_single_text_r2": 0.0357,
+        "activation_r2": 0.53,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      },
+      "emotional_over_involvement": {
+        "lr_r2": 0,
+        "lr_r2_std": 0.6922,
+        "ridge_r2": 0,
+        "ridge_r2_std": 0.5621,
+        "rf_r2": 0.1543,
+        "rf_r2_std": 0.0589,
+        "gb_r2": 0.1195,
+        "gb_r2_std": 0.1159,
+        "best_single_text_r2": 0.09,
+        "activation_r2": 0.2372,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      },
+      "empathetic_responsiveness": {
+        "lr_r2": 0,
+        "lr_r2_std": 0.2377,
+        "ridge_r2": 0,
+        "ridge_r2_std": 0.2488,
+        "rf_r2": 0,
+        "rf_r2_std": 0.1223,
+        "gb_r2": 0,
+        "gb_r2_std": 0.2243,
+        "best_single_text_r2": 0.0339,
+        "activation_r2": 0.5402,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      },
+      "non_judgmental_acceptance": {
+        "lr_r2": 0,
+        "lr_r2_std": 0.7829,
+        "ridge_r2": 0,
+        "ridge_r2_std": 0.1502,
+        "rf_r2": 0.0233,
+        "rf_r2_std": 0.0822,
+        "gb_r2": 0,
+        "gb_r2_std": 0.2007,
+        "best_single_text_r2": 0.0164,
+        "activation_r2": 0.5344,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      },
+      "sycophancy_harmful_validation": {
+        "lr_r2": 0,
+        "lr_r2_std": 0.376,
+        "ridge_r2": 0.0342,
+        "ridge_r2_std": 0.3101,
+        "rf_r2": 0.1667,
+        "rf_r2_std": 0.1299,
+        "gb_r2": 0,
+        "gb_r2_std": 0.2059,
+        "best_single_text_r2": 0.038,
+        "activation_r2": 0.2372,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      },
+      "uncritical_validation": {
+        "lr_r2": 0,
+        "lr_r2_std": 1.6296,
+        "ridge_r2": 0.1864,
+        "ridge_r2_std": 0.1089,
+        "rf_r2": 0.1243,
+        "rf_r2_std": 0.1086,
+        "gb_r2": 0.0883,
+        "gb_r2_std": 0.2269,
+        "best_single_text_r2": 0.1122,
+        "activation_r2": 0.1989,
+        "n_samples": 150,
+        "n_scenarios": 10,
+        "n_folds": 5
+      }
+    },
+    "pooled": {},
+    "summary": {
+      "best_multivariate_method": "Random Forest",
+      "best_multivariate_r2": 0.0776,
+      "mean_single_feature_r2": 0.0468,
+      "mean_activation_r2": 0.3709,
+      "gap_multivariate_vs_single_feature": 1.66,
+      "gap_activation_vs_multivariate": 4.78,
+      "gap_activation_vs_single_feature_R2": 7.93,
+      "mean_r_equiv": {
+        "best_multivariate": 0.279,
+        "best_single_feature": 0.216,
+        "activation": 0.609
+      }
+    },
+    "feature_importance": {
+      "abandonment_of_therapeutic_frame": {
+        "vader_compound": 0.1482,
+        "avg_word_length": 0.1251,
+        "vader_neu": 0.1152,
+        "vader_neg": 0.1132,
+        "vader_pos": 0.1005
+      },
+      "boundary_maintenance": {
+        "avg_word_length": 0.2074,
+        "char_length": 0.1488,
+        "sentence_count": 0.0867,
+        "word_count": 0.0867,
+        "safety_referrals": 0.0653
+      },
+      "crisis_recognition": {
+        "avg_word_length": 0.2012,
+        "word_count": 0.1141,
+        "vader_neu": 0.087,
+        "vader_pos": 0.0825,
+        "char_length": 0.0682
+      },
+      "emotional_over_involvement": {
+        "avg_word_length": 0.2299,
+        "vader_neg": 0.1012,
+        "amplifiers": 0.0952,
+        "client_focus": 0.0814,
+        "word_count": 0.0741
+      },
+      "empathetic_responsiveness": {
+        "char_length": 0.2078,
+        "vader_compound": 0.1473,
+        "avg_word_length": 0.1267,
+        "word_count": 0.079,
+        "vader_neu": 0.0674
+      },
+      "non_judgmental_acceptance": {
+        "vader_pos": 0.1919,
+        "avg_word_length": 0.1348,
+        "char_length": 0.1179,
+        "vader_compound": 0.1075,
+        "vader_neg": 0.096
+      },
+      "sycophancy_harmful_validation": {
+        "avg_word_length": 0.1833,
+        "vader_compound": 0.1178,
+        "word_count": 0.1159,
+        "char_length": 0.111,
+        "vader_neg": 0.096
+      },
+      "uncritical_validation": {
+        "avg_word_length": 0.1582,
+        "hedges": 0.1358,
+        "vader_pos": 0.1198,
+        "vader_compound": 0.1072,
+        "word_count": 0.0845
+      }
+    }
+  },
+  "expanded_12000": {
+    "corpus": "expanded_12000",
+    "n_responses": 12000,
+    "n_features": 19,
+    "feature_names": [
+      "amplifiers",
+      "avg_word_length",
+      "char_length",
+      "client_focus",
+      "directives",
+      "has_list",
+      "hedges",
+      "opens_with_validation",
+      "paragraphs",
+      "question_ratio",
+      "questions",
+      "safety_referrals",
+      "self_reference",
+      "sentence_count",
+      "vader_compound",
+      "vader_neg",
+      "vader_neu",
+      "vader_pos",
+      "word_count"
+    ],
+    "per_trait": {
+      "abandonment_of_therapeutic_frame": {
+        "lr_r2": 0,
+        "lr_r2_std": 0.0207,
+        "ridge_r2": 0.0013,
+        "ridge_r2_std": 0.0191,
+        "rf_r2": 0.0276,
+        "rf_r2_std": 0.0254,
+        "gb_r2": 0.0078,
+        "gb_r2_std": 0.0697,
+        "best_single_text_r2": 0.0086,
+        "activation_r2": 0.4638,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      },
+      "boundary_maintenance": {
+        "lr_r2": 0.1024,
+        "lr_r2_std": 0.046,
+        "ridge_r2": 0.1035,
+        "ridge_r2_std": 0.0464,
+        "rf_r2": 0.1759,
+        "rf_r2_std": 0.0377,
+        "gb_r2": 0.1274,
+        "gb_r2_std": 0.0463,
+        "best_single_text_r2": 0.0392,
+        "activation_r2": 0.2256,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      },
+      "crisis_recognition": {
+        "lr_r2": 0.022,
+        "lr_r2_std": 0.0329,
+        "ridge_r2": 0.0213,
+        "ridge_r2_std": 0.0319,
+        "rf_r2": 0.0655,
+        "rf_r2_std": 0.0279,
+        "gb_r2": 0.0128,
+        "gb_r2_std": 0.0482,
+        "best_single_text_r2": 0.0357,
+        "activation_r2": 0.53,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      },
+      "emotional_over_involvement": {
+        "lr_r2": 0.1225,
+        "lr_r2_std": 0.0532,
+        "ridge_r2": 0.1222,
+        "ridge_r2_std": 0.0548,
+        "rf_r2": 0.1279,
+        "rf_r2_std": 0.0538,
+        "gb_r2": 0.1317,
+        "gb_r2_std": 0.0437,
+        "best_single_text_r2": 0.09,
+        "activation_r2": 0.2372,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      },
+      "empathetic_responsiveness": {
+        "lr_r2": 0.0517,
+        "lr_r2_std": 0.0437,
+        "ridge_r2": 0.0585,
+        "ridge_r2_std": 0.0436,
+        "rf_r2": 0.1512,
+        "rf_r2_std": 0.0316,
+        "gb_r2": 0.1048,
+        "gb_r2_std": 0.05,
+        "best_single_text_r2": 0.0339,
+        "activation_r2": 0.5402,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      },
+      "non_judgmental_acceptance": {
+        "lr_r2": 0.0146,
+        "lr_r2_std": 0.043,
+        "ridge_r2": 0.0317,
+        "ridge_r2_std": 0.0292,
+        "rf_r2": 0.1013,
+        "rf_r2_std": 0.0123,
+        "gb_r2": 0.0674,
+        "gb_r2_std": 0.0411,
+        "best_single_text_r2": 0.0164,
+        "activation_r2": 0.5344,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      },
+      "sycophancy_harmful_validation": {
+        "lr_r2": 0.0258,
+        "lr_r2_std": 0.0672,
+        "ridge_r2": 0.0276,
+        "ridge_r2_std": 0.0679,
+        "rf_r2": 0.0383,
+        "rf_r2_std": 0.0234,
+        "gb_r2": 0,
+        "gb_r2_std": 0.0489,
+        "best_single_text_r2": 0.038,
+        "activation_r2": 0.2372,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      },
+      "uncritical_validation": {
+        "lr_r2": 0.208,
+        "lr_r2_std": 0.0622,
+        "ridge_r2": 0.2073,
+        "ridge_r2_std": 0.0629,
+        "rf_r2": 0.2113,
+        "rf_r2_std": 0.0569,
+        "gb_r2": 0.2296,
+        "gb_r2_std": 0.0721,
+        "best_single_text_r2": 0.1122,
+        "activation_r2": 0.1989,
+        "n_samples": 1500,
+        "n_scenarios": 100,
+        "n_folds": 5
+      }
+    },
+    "pooled": {},
+    "summary": {
+      "best_multivariate_method": "Random Forest",
+      "best_multivariate_r2": 0.1124,
+      "mean_single_feature_r2": 0.0468,
+      "mean_activation_r2": 0.3709,
+      "gap_multivariate_vs_single_feature": 2.4,
+      "gap_activation_vs_multivariate": 3.3,
+      "gap_activation_vs_single_feature_R2": 7.93,
+      "mean_r_equiv": {
+        "best_multivariate": 0.335,
+        "best_single_feature": 0.216,
+        "activation": 0.609
+      }
+    },
+    "feature_importance": {
+      "abandonment_of_therapeutic_frame": {
+        "avg_word_length": 0.1429,
+        "char_length": 0.1343,
+        "vader_neu": 0.1081,
+        "vader_neg": 0.0964,
+        "word_count": 0.0778
+      },
+      "boundary_maintenance": {
+        "char_length": 0.1767,
+        "avg_word_length": 0.1496,
+        "sentence_count": 0.1251,
+        "vader_neu": 0.0789,
+        "vader_compound": 0.0604
+      },
+      "crisis_recognition": {
+        "avg_word_length": 0.1382,
+        "sentence_count": 0.1259,
+        "char_length": 0.1089,
+        "word_count": 0.108,
+        "vader_neu": 0.0884
+      },
+      "emotional_over_involvement": {
+        "avg_word_length": 0.2192,
+        "paragraphs": 0.1212,
+        "vader_compound": 0.0889,
+        "question_ratio": 0.0794,
+        "vader_pos": 0.0538
+      },
+      "empathetic_responsiveness": {
+        "char_length": 0.1512,
+        "sentence_count": 0.0945,
+        "has_list": 0.09,
+        "vader_neu": 0.0806,
+        "vader_neg": 0.0629
+      },
+      "non_judgmental_acceptance": {
+        "char_length": 0.1383,
+        "amplifiers": 0.1094,
+        "avg_word_length": 0.0972,
+        "vader_neu": 0.0962,
+        "word_count": 0.0727
+      },
+      "sycophancy_harmful_validation": {
+        "vader_compound": 0.1145,
+        "avg_word_length": 0.114,
+        "char_length": 0.0741,
+        "word_count": 0.0731,
+        "vader_neu": 0.067
+      },
+      "uncritical_validation": {
+        "has_list": 0.1996,
+        "question_ratio": 0.1563,
+        "word_count": 0.1136,
+        "avg_word_length": 0.0671,
+        "sentence_count": 0.0559
+      }
+    }
+  },
+  "comparison": {
+    "primary_best_multi_r2": 0.0776,
+    "expanded_best_multi_r2": 0.1124,
+    "activation_r2": 0.3709,
+    "primary_gap": 4.78,
+    "expanded_gap": 3.3,
+    "interpretation": "Multivariate text features improve over single-feature baseline but activation monitoring retains a substantial advantage in variance explained."
+  }
+}

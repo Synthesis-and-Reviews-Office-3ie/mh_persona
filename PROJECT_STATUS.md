@@ -1,6 +1,6 @@
 # AI Persona Drift Monitoring — ROADMAP
 
-> **Last Updated:** February 10, 2026  
+> **Last Updated:** February 12, 2026  
 > **Goal:** Real-time monitoring system for mental health chatbot persona drift  
 > **Foundation:** Chen et al. 2025 "Persona Vectors" ([arXiv:2507.21509](https://arxiv.org/abs/2507.21509))
 
@@ -364,9 +364,9 @@ All results stored in `04_results/phase3/`:
 - [x] **Step 4.5:** Therapeutic quality assessment (expert review protocol) → `expert_review_protocol.md`
 - [x] **Step 4.6a:** Workstream A — Judge triangulation ✅ (GPT+Gemini panel, ICC≥0.70 all 8 traits)
 - [ ] **Step 4.6b:** Workstream B — Human validation
-- [ ] **Step 4.6c:** Workstream C — Statistical robustness
-- [ ] **Step 4.6d:** Workstream D — Natural drift experiments
-- [ ] **Step 4.6e:** Workstream E — Paper revisions and submission
+- [x] **Step 4.6c:** Workstream C — Statistical robustness ✅ (power analysis + quantisation + corpus expansion)
+- [x] **Step 4.6d:** Workstream D — Natural drift experiments ✅ (context erosion + fine-tuning + adversarial)
+- [x] **Step 4.6e:** Workstream E — Paper revisions (E1–E7 all complete)
 
 ### Step 4.6a Results: Workstream A — Judge Triangulation ✅ COMPLETE
 
@@ -450,7 +450,7 @@ Designed and documented in `05_docs/expert_review_protocol.md`:
 | `04_results/phase3_monitoring_design.md` | Phase 3 design document |
 | `04_results/phase3/` | **All Phase 3 outputs** (36 JSONs + 21 PNGs) |
 | `05_docs/research_document_activation_steering_v2.md` | Full Lancet-style research paper |
-| `05_docs/research_document_activation_steering_v3.md` | **Current paper** (v3 with cross-model safety) |
+| `05_docs/research_document_activation_steering_v5.md` | **Current paper** (v5 with all E1–E7 edits, humanized) |
 | `03_code/step3_safety_stress_test.py` | Cross-model safety stress test (Phase 4.4) |
 | `03_code/step4_select_review_sessions.py` | Expert review session selection (Phase 4.5) |
 | `05_docs/expert_review_protocol.md` | Clinical expert review protocol |
@@ -491,4 +491,4 @@ Designed and documented in `05_docs/expert_review_protocol.md`:
 
 ---
 
-*Last updated: February 10, 2026*
+*Last updated: February 12, 2026*

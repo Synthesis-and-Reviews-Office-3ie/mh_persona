@@ -1,0 +1,12 @@
+﻿modal : +- Error 
+---------------------------------------------------------------------+
+At line:1 char:125
++ ... _persona\03_code"; modal run modal_deberta_classifier.py 2>&1 | Out-F ...
++                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (+- Error ------...--------------+ 
+   :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+| 'charmap' codec can't encode character '\u2713' in position 0: character    |
+| maps to <undefined>                                                         |
++-----------------------------------------------------------------------------+
